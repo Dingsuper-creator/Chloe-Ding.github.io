@@ -1,0 +1,344 @@
+/* ========= Reset & Base ========= */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* ========= Background, Font & Overlay ========= */
+body{
+  font-family:"Times New Roman",Times,serif;
+  background:url("Chicago.jpg") no-repeat center/cover fixed;
+  filter:brightness(0.98) saturate(1);
+  color:#111;
+  line-height:1.6;
+  position:relative;
+}
+
+/* -------- Light overlay to soften highlights -------- */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,0.15);      /* 保持 0.15 透明度 */
+  backdrop-filter:blur(0.2px);
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* ========= Layout Container ========= */
+.container{
+  display:flex;
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 20px;
+  gap:40px;
+}
+
+/* ========= Sidebar ========= */
+.sidebar{width:280px;flex-shrink:0;}
+.profile{
+  background:rgba(255,255,255,0.96);
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  padding:24px 16px;
+  text-align:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.avatar{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:20px;
+  border:4px solid #ddd;
+}
+.profile h1{font-size:1.8rem;margin-bottom:8px;color:#003366;}
+.profile .sub{font-size:.95rem;color:#444;margin-bottom:4px;}
+
+/* Icon row */
+.social-links{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+.social-links a{
+  color:#555;
+  font-size:1.3rem;
+  transition:color .2s;
+}
+.social-links a:hover{color:#1e40af;}
+
+/* Icon + text list */
+.icon-text-list{
+  list-style:none;
+  margin-top:18px;
+  text-align:left;
+}
+.icon-text-list li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+  font-size:1rem;
+  color:#333;
+}
+.icon-text-list i{font-size:1.2rem;width:20px;}
+.icon-text-list a{color:#333;text-decoration:none;}
+.icon-text-list a:hover{color:#1e40af;text-decoration:underline;}
+
+/* ========= Main Content ========= */
+.main-content{flex:1;}
+.main-content-inner{
+  background:rgba(255,255,255,0.96);
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  padding:32px 32px 48px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+main h2{
+  font-size:1.6rem;
+  margin-bottom:16px;
+  border-left:4px solid #2563eb;
+  padding-left:12px;
+  color:#003366;
+}
+main section{margin-bottom:48px;}
+#about p{
+  font-size:1rem;
+  color:#222;
+  text-wrap:pretty;
+}
+
+/* News & Interests */
+#news ul,
+#interests ul{
+  list-style:disc inside;
+  margin-left:12px;
+}
+#news li,
+#interests li{
+  margin-bottom:6px;
+  font-size:.96rem;
+}
+
+/* ========= Publication Cards ========= */
+.pub-card{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  background:rgba(248,250,252,.72);
+  border:1px solid rgba(203,213,225,.72);
+  border-radius:6px;
+  overflow:visible;
+  box-shadow:0 2px 8px rgba(15,23,42,.035);
+  margin-bottom:16px;
+  padding:12px 14px;
+}
+
+.pub-image{
+  flex:0 0 260px;
+  width:260px;
+  height:auto;
+  min-height:0;
+  position:static;
+  line-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border-right:none;
+  overflow:visible;
+}
+
+.pub-image img{
+  display:block;
+  position:static;
+  inset:auto;
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  object-position:center center;
+  padding:0;
+  box-sizing:border-box;
+  background:#fff;
+  border:1px solid #cbd5e1;
+  box-shadow:0 2px 6px rgba(15,23,42,.08);
+}
+
+.pub-info{
+  padding:0;
+  flex:1;
+  min-width:0;
+}
+
+.pub-info h3{
+  font-size:1.1rem;
+  line-height:1.32;
+  margin-bottom:4px;
+  color:#003366;
+}
+
+.pub-info .authors{
+  font-size:.9rem;
+  line-height:1.36;
+  color:#555;
+  margin-bottom:3px;
+}
+
+.pub-info .venue{
+  font-size:.88rem;
+  line-height:1.32;
+  font-style:italic;
+  color:#777;
+  margin-bottom:8px;
+}
+
+.pub-info .links{
+  line-height:1.2;
+}
+
+.pub-info .links a{
+  text-decoration:none;
+  color:#2563eb;
+  font-size:.88rem;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+
+.pub-info .links a:hover{
+  text-decoration:underline;
+}
+
+/* ========= Responsive ========= */
+@media(max-width:900px){
+  .container{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .main-content-inner{
+    padding:24px;
+  }
+
+  .pub-card{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .pub-image{
+    width:100%;
+    flex:0 0 auto;
+    height:auto;
+    border-right:none;
+    border-bottom:none;
+  }
+
+  .pub-image img{
+    width:100%;
+    height:auto;
+  }
+}
+
+/* ========= Experience Cards ========= */
+.experience-list{
+  margin:1em 0 1.5em;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.experience-item{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  min-height:72px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-left:4px solid #2563eb;
+  border-radius:8px;
+  padding:12px 16px;
+  box-shadow:0 3px 10px rgba(0,0,0,.045);
+  transition:box-shadow .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.experience-item:hover{
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,.075);
+  border-color:#d1d5db;
+}
+
+.experience-image{
+  flex:0 0 112px;
+  width:112px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+}
+
+.experience-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.experience-main{
+  flex:1;
+  min-width:0;
+}
+
+.experience-main h3{
+  margin:0 0 2px;
+  font-size:1rem;
+  color:#003366;
+}
+
+.experience-main p{
+  margin:0;
+  font-size:.94rem;
+}
+
+.experience-meta{
+  flex:0 0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  text-align:right;
+  white-space:nowrap;
+  font-size:.86rem;
+  color:#64748b;
+}
+
+@media(max-width:700px){
+  .experience-item{
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+
+  .experience-image{
+    flex-basis:100px;
+    width:100px;
+    height:30px;
+  }
+
+  .experience-main{
+    flex:1 1 calc(100% - 120px);
+  }
+
+  .experience-meta{
+    flex-basis:100%;
+    text-align:left;
+    white-space:normal;
+    margin-left:116px;
+  }
+}
