@@ -90,12 +90,28 @@
 
     <main class="main-content">
       <div class="main-content-inner">
+        <section class="hero-panel" aria-labelledby="hero-title">
+          <p class="kicker">Medical AI · Clinical Safety · Agent Evaluation</p>
+          <h2 id="hero-title">Building clinically grounded AI systems from benchmarks to bedside-facing safety.</h2>
+          <p>
+            My work connects hands-on clinical training with medical LLM alignment, benchmark construction,
+            specialty triage, and multi-agent evaluation for high-stakes healthcare settings.
+          </p>
+          <div class="stat-row" aria-label="Profile highlights">
+            <span><strong>8+</strong> publications</span>
+            <span><strong>3</strong> benchmark tracks</span>
+            <span><strong>3 yrs</strong> clinical training</span>
+          </div>
+        </section>
+
         <section id="about">
           <h2>About Me</h2>
           <p>
             I am a Research Assistant at Shanghai Artificial Intelligence Laboratory. My research focuses on medical AI,
-            machine learning, large language models, and agent systems, with a particular interest in clinically grounded
-            evaluation, safety alignment, biomedical visual reasoning, and patient-facing multi-agent medical AI.
+            machine learning, large language models, and agent systems. I am especially interested in clinically grounded
+            evaluation, safety alignment, benchmark construction, biomedical visual reasoning, and patient-facing
+            multi-agent medical AI. My clinical training as a resident physician helps shape my work on triage,
+            escalation safety, and real-world patient-facing risk communication.
           </p>
         </section>
 
@@ -107,6 +123,9 @@
             <li>Artificial Intelligence</li>
             <li>Large Language Models</li>
             <li>Agent Systems</li>
+            <li>Benchmark Construction</li>
+            <li>Clinical AI Safety</li>
+            <li>Medical Triage</li>
           </ul>
         </section>
 
@@ -150,7 +169,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-accent="green">
               <h3>SafeMed-R1: Medical LLMs</h3>
               <p class="project-meta"><a href="https://arxiv.org/abs/2605.28338" target="_blank">arXiv:2605.28338</a> | Dec. 2024 - Dec. 2025</p>
               <ul>
@@ -158,6 +177,64 @@
                 <li>Built the Clinical Trust Signals pipeline for expert-reviewed QA-CoT construction, rubric scoring, adversarial re-answering checks, and benchmark evaluation.</li>
                 <li>Deployed SafeMed-R1 as both a standalone aligned medical model and a modular turn-level governance model for patient-facing dialogue.</li>
               </ul>
+            </article>
+
+            <article class="project-card" data-accent="amber">
+              <h3>MedBench / MedTriage: Benchmarking and Specialty Triage</h3>
+              <p class="project-meta"><em>npj Digital Medicine</em> | Dec. 2024 - Apr. 2025</p>
+              <ul>
+                <li>Built MedTriage from hospital intake records, online guidance dialogues, and outpatient clinical notes with leakage-prevention cleaning and strict multi-label department recommendation.</li>
+                <li>Developed MedGPT-Guide, a retrieval-augmented triage model using BGE-m3 retrieval, CoT prompting, candidate-order perturbation, self-consistency voting, and ensemble aggregation.</li>
+                <li>Contributed to MedBench v4 infrastructure for LLMs, multimodal models, and clinical agents, including rotating test pools, agent-based tasks, tool use, safety-critical reasoning, and LLM-as-a-judge calibration.</li>
+              </ul>
+            </article>
+
+            <article class="project-card" data-accent="rose">
+              <h3>Agentic Benchmark for High-Stakes Financial LLM Agents</h3>
+              <p class="project-meta">CNFinBench | KDD 2026 accepted</p>
+              <ul>
+                <li>Co-developed CNFinBench to evaluate expertise, autonomy, and integrity across 29 subtasks, 11,947 single-turn QA instances, and 321 multi-turn adversarial dialogues.</li>
+                <li>Designed workflow evaluation covering requirement parsing, path planning, API/database operations, tool invocation, multi-agent collaboration, and result verification.</li>
+                <li>Helped develop HICS to quantify behavioral compliance drift across open- and closed-source models under multi-turn attack settings.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="clinical-training">
+          <h2>Clinical and Research Training</h2>
+          <article class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <div>
+              <div class="training-heading">
+                <h3>Resident Physician</h3>
+                <span>Jul. 2022 - Jul. 2025</span>
+              </div>
+              <p>Putuo District Central Hospital, Shanghai University of Traditional Chinese Medicine</p>
+              <ul>
+                <li>Completed standardized residency training across emergency medicine, cardiology, respiratory medicine, pediatrics, obstetrics, neurology, and related departments.</li>
+                <li>Gained first-hand exposure to red-flag presentations including chest pain, acute dyspnea, obstetric bleeding, pediatric fever, trauma, infection, and neurologic emergencies.</li>
+                <li>Developed clinical understanding of patient-facing risk communication, urgent referral thresholds, and real-world constraints in early-stage triage.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <div class="education-grid">
+            <article class="education-card">
+              <div class="education-year">Expected Dec. 2026</div>
+              <h3>Master of Medicine</h3>
+              <p>Shanghai University of Traditional Chinese Medicine</p>
+              <span>Medical Statistics · Research Methodology · Scientific Writing · Clinical Practice</span>
+            </article>
+
+            <article class="education-card">
+              <div class="education-year">2015 - 2020</div>
+              <h3>Bachelor of Medicine</h3>
+              <p>Jiangxi University of Traditional Chinese Medicine</p>
+              <span>Anatomy · Physiology · Pathology · Pharmacology · Medical Imaging · Immunology</span>
             </article>
           </div>
         </section>
