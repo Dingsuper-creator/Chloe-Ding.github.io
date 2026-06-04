@@ -93,11 +93,11 @@
         <section id="about">
           <h2>About Me</h2>
           <p>
-            I am a Research Assistant at Shanghai Artificial Intelligence Laboratory. My research focuses on medical AI,
-            machine learning, large language models, and agent systems. I am especially interested in clinically grounded
-            evaluation, safety alignment, benchmark construction, biomedical visual reasoning, and patient-facing
-            multi-agent medical AI. My clinical training as a resident physician helps shape my work on triage,
-            escalation safety, and real-world patient-facing risk communication.
+            I am a Research Assistant at Shanghai Artificial Intelligence Laboratory with clinical training as a resident
+            physician. My work focuses on medical AI, large language models, and agent systems for clinically grounded
+            evaluation, safety alignment, benchmark construction, and patient-facing governance. I am especially
+            interested in connecting training-time safety alignment with real-time escalation control, specialty triage,
+            and practical risk communication in high-stakes healthcare settings.
           </p>
         </section>
 
@@ -121,7 +121,7 @@
             <li>[2026] Paper published in <em>npj Digital Medicine</em> on benchmarking and competition for specialty triage.</li>
             <li>[2026] One paper accepted by CVPR 2026 on biomedical object referring and segmentation with MLLMs.</li>
             <li>[2026] One paper accepted by KDD 2026 on finance agent evaluation with CNFinBench.</li>
-            <li>[2026] SafeMed-R1 released as an arXiv preprint on safety and ethics alignment for medical LLMs.</li>
+            <li>[2026] SafeMed-R1 released as an arXiv preprint with open code for safety and ethics alignment in medical LLMs.</li>
             <li>[2025] Joined Shanghai Artificial Intelligence Laboratory as a Research Assistant.</li>
           </ul>
         </section>
@@ -150,28 +150,28 @@
               <p class="project-meta">arXiv / Manuscript under review at NEJM AI | Dec. 2025 - May 2026</p>
               <ul>
                 <li>Built a simulated patient-doctor evaluation environment integrating patient simulators, frontier LLM doctor backbones, an automated clinical judge, and a SafeMed-R1 in-loop safety controller.</li>
-                <li>Formalized delayed escalation as a temporal safety failure and evaluated five LLMs across 150 multi-turn consultations against a clinician reference benchmark.</li>
-                <li>Implemented a five-action controller: PASS, REWRITE, ASK-MORE, ESCALATE, and REFUSE.</li>
+                <li>Formalized delayed escalation as a temporal safety failure and evaluated five LLMs across 150 multi-turn consultations against a 40-case clinician reference benchmark.</li>
+                <li>Implemented a five-action controller: PASS, REWRITE, ASK-MORE, ESCALATE, and REFUSE, reducing mean escalation turn from 6.28 to 3.78 rounds and missed escalation from 62.5% to 12.5%.</li>
               </ul>
             </article>
 
             <article class="project-card" data-accent="green">
               <h3>SafeMed-R1: Medical LLMs</h3>
-              <p class="project-meta"><a href="https://arxiv.org/abs/2605.28338" target="_blank">arXiv:2605.28338</a> | Dec. 2024 - Dec. 2025</p>
+              <p class="project-meta"><a href="https://arxiv.org/abs/2605.28338" target="_blank">arXiv:2605.28338</a> | <a href="https://github.com/OpenMedZoo/SafeMed-R1" target="_blank">Code</a> | Dec. 2024 - Dec. 2025</p>
               <ul>
-                <li>Developed SafeMed-R1, a safety- and ethics-aligned medical LLM based on Qwen3-32B, using SFT and RL/GRPO with clinician-audited reasoning traces.</li>
-                <li>Built the Clinical Trust Signals pipeline for expert-reviewed QA-CoT construction, rubric scoring, adversarial re-answering checks, and benchmark evaluation.</li>
-                <li>Deployed SafeMed-R1 as both a standalone aligned medical model and a modular turn-level governance model for patient-facing dialogue.</li>
+                <li>Developed SafeMed-R1, a safety- and ethics-aligned medical LLM based on Qwen3-32B, using SFT and RL/GRPO with clinician-audited reasoning traces, safety/ethics supervision, and red-team jailbreak stress testing.</li>
+                <li>Built the Clinical Trust Signals pipeline for expert-reviewed QA-CoT construction, rubric scoring, adversarial re-answering checks, and benchmark evaluation; achieved 79.6% macro-averaged clinical accuracy and reduced unsafe outputs under adversarial testing.</li>
+                <li>Deployed SafeMed-R1 as both a standalone aligned medical model and a modular turn-level governance model for patient-facing dialogue, connecting training-time safety alignment with real-time escalation control.</li>
               </ul>
             </article>
 
             <article class="project-card" data-accent="amber">
               <h3>MedBench / MedTriage: Benchmarking and Specialty Triage</h3>
-              <p class="project-meta"><em>npj Digital Medicine</em> | Dec. 2024 - Apr. 2025</p>
+              <p class="project-meta"><a href="https://medbench.opencompass.org.cn/home" target="_blank">Homepage</a> | <em>npj Digital Medicine</em> | Dec. 2024 - Apr. 2025</p>
               <ul>
                 <li>Built MedTriage from hospital intake records, online guidance dialogues, and outpatient clinical notes with leakage-prevention cleaning and strict multi-label department recommendation.</li>
                 <li>Developed MedGPT-Guide, a retrieval-augmented triage model using BGE-m3 retrieval, CoT prompting, candidate-order perturbation, self-consistency voting, and ensemble aggregation.</li>
-                <li>Contributed to MedBench v4 infrastructure for LLMs, multimodal models, and clinical agents, including rotating test pools, agent-based tasks, tool use, safety-critical reasoning, and LLM-as-a-judge calibration.</li>
+                <li>Contributed to MedBench infrastructure for LLMs, a cloud-based evaluation platform spanning 700k+ expert-curated tasks, 24 primary and 91 secondary specialties, and dedicated tracks for LLMs, multimodal models, and clinical agents.</li>
               </ul>
             </article>
 
@@ -190,7 +190,9 @@
         <section id="clinical-training">
           <h2>Clinical and Research Training</h2>
           <article class="training-card">
-            <div class="training-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <div class="training-logo">
+              <img src="images/putuo-hospital-logo.png" alt="Putuo District Central Hospital">
+            </div>
             <div>
               <div class="training-heading">
                 <h3>Resident Physician</h3>
@@ -250,6 +252,7 @@
               <p class="venue">arXiv preprint, 2026.</p>
               <div class="links">
                 <a href="https://arxiv.org/abs/2605.28338" target="_blank"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
+                <a href="https://github.com/OpenMedZoo/SafeMed-R1" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
               </div>
             </div>
           </div>
@@ -278,6 +281,7 @@
               <p class="authors"><strong>Ding, C.*</strong>, Bian, M.*, Yuan, M.*, et al.</p>
               <p class="venue"><em>npj Digital Medicine</em>, IF: 15.1, 2026.</p>
               <div class="links">
+                <a href="https://medbench.opencompass.org.cn/home" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Homepage</a>
                 <a href="https://doi.org/10.1038/s41746-026-02433-8" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> DOI</a>
               </div>
             </div>
