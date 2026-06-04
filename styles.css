@@ -146,6 +146,10 @@ main h2{
   color:#1f2937;
 }
 
+#about p + p{
+  margin-top:10px;
+}
+
 #news ul{
   list-style:none;
   padding-left:0;
