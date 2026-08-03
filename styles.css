@@ -308,7 +308,7 @@ button:focus-visible {
   grid-template-columns: minmax(0, 1fr) 270px;
   align-items: center;
   gap: 46px;
-  min-height: 510px;
+  min-height: 545px;
   overflow: hidden;
   border-radius: var(--radius-lg);
   padding: clamp(42px, 6vw, 72px);
@@ -323,6 +323,21 @@ button:focus-visible {
   border: 52px solid var(--coral-soft);
   border-radius: 50%;
   pointer-events: none;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--coral), transparent);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {
@@ -343,7 +358,7 @@ button:focus-visible {
   max-width: 690px;
   margin: 18px 0 20px;
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-size: clamp(2.7rem, 5.2vw, 5rem);
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: -0.045em;
@@ -357,12 +372,57 @@ button:focus-visible {
   line-height: 1.65;
 }
 
-.hero-detail {
+.hero-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
   max-width: 690px;
-  margin: 0;
+  margin-top: 24px;
+}
+
+.hero-focus-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+  min-width: 0;
+  border: 1px solid rgba(217, 227, 222, 0.92);
+  border-radius: 13px;
+  background: rgba(247, 251, 249, 0.86);
+  padding: 12px 11px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero-focus-item:hover {
+  transform: translateY(-2px);
+  border-color: #b7cec3;
+  background: #fff;
+}
+
+.hero-focus-item > span {
+  color: var(--coral);
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.hero-focus-item strong,
+.hero-focus-item small {
+  display: block;
+}
+
+.hero-focus-item strong {
+  color: var(--green-deep);
+  font-family: var(--font-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.hero-focus-item small {
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 0.91rem;
-  line-height: 1.7;
+  font-size: 0.61rem;
+  line-height: 1.35;
 }
 
 .hero-actions {
@@ -408,6 +468,7 @@ button:focus-visible {
 
 .research-compass {
   position: relative;
+  z-index: 2;
   width: 250px;
   height: 250px;
   border: 1px dashed #a7bdb3;
@@ -1234,6 +1295,29 @@ button:focus-visible {
 
   .hero-section h2 {
     font-size: clamp(2.45rem, 12vw, 3.8rem);
+  }
+
+  .hero-focus-grid {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-top: 21px;
+  }
+
+  .hero-focus-item {
+    grid-template-columns: 26px 1fr;
+    padding: 11px 13px;
+  }
+
+  .hero-focus-item div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .hero-focus-item small {
+    margin-top: 0;
+    text-align: right;
   }
 
   .section-block {
