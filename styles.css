@@ -1,0 +1,593 @@
+:root {
+  --ink: #595959;
+  --heading: #043361;
+  --link: #338db5;
+  --muted: #767676;
+  --line: #e5e5e5;
+  --paper: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #006699;
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading);
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 0 0 16px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+strong {
+  color: #222;
+  font-weight: 600;
+}
+
+ul,
+ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.site-shell {
+  display: grid;
+  grid-template-columns: 232px minmax(0, 650px);
+  gap: 78px;
+  width: min(960px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 40px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 64px;
+  text-align: center;
+}
+
+.avatar {
+  display: block;
+  width: 118px;
+  height: 118px;
+  margin: 8px auto 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.profile-role {
+  margin-bottom: 3px;
+  font-size: 18px;
+}
+
+.profile-org {
+  margin: 0 auto 7px;
+  line-height: 1.35;
+}
+
+.profile-email {
+  display: inline-block;
+  max-width: 100%;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--heading);
+  border-radius: 50%;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.social-links a:hover {
+  background: #f4f7fa;
+  color: #006699;
+  text-decoration: none;
+}
+
+.social-links svg {
+  width: 19px;
+  height: 19px;
+}
+
+.cv-icon {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-location {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.main-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.section-block {
+  margin-bottom: 29px;
+}
+
+.section-block > :last-child {
+  margin-bottom: 0;
+}
+
+.news-list {
+  padding-left: 20px;
+}
+
+.news-list li {
+  padding-left: 1px;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  white-space: nowrap;
+}
+
+.news-list br + .authors {
+  font-size: 15px;
+}
+
+.metric-badge {
+  display: inline;
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.metric-badge::before {
+  content: " · ";
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.publication-group {
+  margin: 26px 0 16px;
+  font-size: 20px;
+}
+
+.publication-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: 22px;
+  margin: 0 0 26px;
+}
+
+.publication-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 105px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.publication-visual img {
+  display: block;
+  width: 100%;
+  max-height: 118px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.venue-badge {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  z-index: 1;
+  padding: 1px 7px;
+  border-radius: 4px 0 4px 0;
+  background: var(--heading);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+
+
+
+.publication-info h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.publication-info p {
+  margin: 0 0 3px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.publication-meta-row {
+  margin-bottom: 4px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.publication-meta-row > .metric-badge:first-child::before {
+  content: "";
+}
+
+.status-badge {
+  color: var(--muted);
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.publication-links a {
+  padding: 1px 8px;
+  border: 1px solid #66859f;
+  border-radius: 3px;
+  color: var(--heading);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.publication-links a:hover {
+  background: var(--heading);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.role-card,
+.training-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.role-logo,
+.training-logo {
+  flex: 0 0 48px;
+}
+
+.role-logo img,
+.training-logo img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.role-main,
+.training-card > div:last-child {
+  min-width: 0;
+}
+
+.role-card h3,
+.training-card h3,
+.education-card h3 {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.role-card p,
+.training-org {
+  margin-bottom: 4px;
+}
+
+.role-overline,
+.education-year {
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.project-card {
+  margin-bottom: 20px;
+}
+
+.project-index {
+  display: none;
+}
+
+.project-card h3 {
+  margin-bottom: 3px;
+  font-size: 18px;
+}
+
+.project-meta {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.project-card ul,
+.training-card ul {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.education-card {
+  margin-bottom: 17px;
+}
+
+.education-card p {
+  margin-bottom: 3px;
+}
+
+.education-card > span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.service-list {
+  margin-bottom: 0;
+}
+
+.site-footer {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  transform: translateY(-200%);
+  padding: 8px 12px;
+  border-radius: 3px;
+  background: var(--heading);
+  color: #fff;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--heading);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top svg {
+  width: 17px;
+  height: 17px;
+}
+
+@media (max-width: 960px) {
+  .site-shell {
+    display: block;
+    width: min(650px, calc(100% - 36px));
+    padding-top: 24px;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: 26px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .profile-org {
+    max-width: 320px;
+  }
+
+  .profile-email {
+    font-size: 13px;
+  }
+
+  .avatar {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-shell {
+    width: calc(100% - 30px);
+    padding-top: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .publication-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 27px;
+  }
+
+  .publication-visual {
+    width: 150px;
+  }
+
+  .role-card,
+  .training-card {
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  .site-shell {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: 24px;
+  }
+
+  .scroll-to-top,
+  .skip-link {
+    display: none;
+  }
+
+  .publication-card,
+  .project-card,
+  .education-card {
+    break-inside: avoid;
+  }
+}
