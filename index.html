@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Chao Ding | Clinical AI Reliability</title>
-  <meta name="description" content="Chao Ding studies clinical AI reliability across evolving evidence, from clinician-verified supervision and evaluation to governance of clinical agent behavior.">
+  <meta name="description" content="Chao Ding studies the behavioral reliability of clinical AI as patient evidence evolves, from clinician-grounded supervision and evaluation to agent governance.">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://dingsuper-creator.github.io/Chloe-Ding.github.io/">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Chao Ding | Clinical AI Reliability">
-  <meta property="og:description" content="Evaluation and governance across evolving clinical evidence.">
+  <meta property="og:description" content="Evaluation and governance of clinical AI across evolving evidence.">
   <meta property="og:url" content="https://dingsuper-creator.github.io/Chloe-Ding.github.io/">
   <meta property="og:image" content="https://dingsuper-creator.github.io/Chloe-Ding.github.io/images/Chloe.png">
-  <script>document.documentElement.classList.add('js')</script>
 
   <script type="application/ld+json">
   {
@@ -55,7 +54,7 @@
     <aside class="sidebar" aria-label="Profile">
       <div class="profile-card">
         <img src="images/Chloe.png" alt="Portrait of Chao Ding" class="avatar" width="118" height="118" fetchpriority="high">
-        <p class="profile-name">Chao Ding</p>
+        <h1>Chao Ding</h1>
         <p class="profile-role">Clinical AI researcher</p>
         <p class="profile-org">University of California, Santa Cruz<br>Shanghai AI Laboratory</p>
         <a class="profile-email" href="mailto:dingchaochao58@gmail.com">dingchaochao58 (at) gmail.com</a>
@@ -67,145 +66,127 @@
           <a href="mailto:dingchaochao58@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
         </nav>
         <p class="profile-location">Shanghai, China</p>
-        <nav class="section-nav" aria-label="On this page">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
-          <a href="#clinical-training">Clinical training</a>
-          <a class="mobile-cv" href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-          <a href="#contact">Contact</a>
-        </nav>
       </div>
     </aside>
     <main id="main-content" class="main-content" tabindex="-1">
-      <section id="about" class="hero-section">
-        <p class="hero-owner">Chao Ding · Research intern at UC Santa Cruz and Shanghai AI Laboratory</p>
-        <h1 class="hero-lines"><span class="line"><span>Clinical AI</span></span><span class="line"><span>Reliability</span></span></h1>
-        <p class="hero-subtitle" data-load>Evaluation and Governance Across Evolving Evidence</p>
-        <p class="hero-intro" data-load>My research asks how clinical AI can turn accumulating evidence into an updated patient assessment and a timely, appropriate next action.</p>
-        <a class="primary-action" href="#research" data-load>Explore the research</a>
-        <p class="hero-vision">From Trustworthy Answers to Safe Clinical Action</p>
+      <section id="about" class="section-block">
+        <h2>About Me</h2>
+        <p>I am a <strong>remote research intern at the University of California, Santa Cruz (UCSC)</strong> and a <strong>medical AI research intern at Shanghai AI Laboratory</strong>. My research focuses on the behavioral reliability of clinical AI across evolving evidence.</p>
+        <p>Drawing on my clinical training, I study how models turn new findings into updated patient assessments and timely, appropriate actions. My broader aim is to move from trustworthy answers to safe clinical action.</p>
       </section>
 
-      <section id="research" class="section-block research-section">
-        <div class="section-intro" data-reveal>
-          <h2>One question, three stages</h2>
-          <p>Reliable clinical behavior has to be taught, measured, and tested over time. These projects follow that progression.</p>
+      <section id="research" class="section-block">
+        <h2>Research Focus</h2>
+        <p>My work follows three connected questions about clinical AI reliability.</p>
+        <div class="research-topic">
+          <h3>Clinician-grounded judgment</h3>
+          <p><strong>Human-Verified Dataset</strong> and <a href="https://arxiv.org/abs/2605.28338" target="_blank" rel="noopener noreferrer">SafeMed-R1</a> use clinician review, correction, and safety criteria to ground model supervision and alignment.</p>
         </div>
-
-        <div class="research-stage" data-reveal>
-          <div class="stage-heading">
-            <h3>Ground judgment in clinician review</h3>
-            <p>Clinician verification and revision turn medical reasoning, safety, and ethics into supervision that a model can learn from.</p>
-          </div>
-          <div class="stage-work">
-            <p><strong>Human-Verified Dataset</strong><br>Clinician-reviewed examples and corrections for trustworthy clinical judgments.</p>
-            <p><strong><a href="https://arxiv.org/abs/2605.28338" target="_blank" rel="noopener noreferrer">SafeMed-R1</a></strong><br>Clinician-audited safety and ethics alignment for medical language models. <a href="https://github.com/OpenMedZoo/SafeMed-R1" target="_blank" rel="noopener noreferrer">Code</a></p>
-          </div>
+        <div class="research-topic">
+          <h3>Evaluation against clinical standards</h3>
+          <p><strong>Med-GRADE</strong> asks whether an automated evaluator actually reflects clinician standards when assessing doctor–patient encounters.</p>
         </div>
-
-        <div class="research-stage research-stage-measure" data-reveal>
-          <div class="stage-heading">
-            <h3>Measure against clinical standards</h3>
-            <p>Before using automated scores to guide progress, the evaluator itself needs to agree with clinician standards.</p>
-          </div>
-          <div class="stage-work">
-            <p><strong>Med-GRADE</strong><br>A clinician-grounded rubric for assessing doctor–patient encounters. Accepted to <em>EMNLP 2026</em>.</p>
-          </div>
-        </div>
-
-        <div class="research-stage research-stage-action" data-reveal>
-          <div class="stage-heading">
-            <h3>Test the next action</h3>
-            <p>The central question is whether new information changes what the model believes and what it does next.</p>
-          </div>
-          <div class="stage-work">
-            <p><strong>Conversation governance</strong><br>A fluent, caring exchange can still delay escalation after a risk signal appears.</p>
-            <p><strong>WARD</strong> <span class="submission-status">Submitted to ICLR 2027</span><br>In longitudinal records, an agent can repeat a test result correctly yet fail to update the patient state, or keep calling tools without advancing the case.</p>
-          </div>
+        <div class="research-topic">
+          <h3>Behavior as evidence evolves</h3>
+          <p><strong>Conversation governance</strong> studies delayed escalation when a risk signal has already appeared. <strong>WARD</strong> (<em>submitted to ICLR 2027</em>) studies whether agents update patient state and advance a longitudinal case after new evidence arrives.</p>
+          <p>The conversation study uses a SafeMed-R1 controller and criteria derived from Med-GRADE. WARD identifies failures in record-based agent behavior; it does not show that the earlier controller solves them.</p>
         </div>
       </section>
 
-      <section id="behavior" class="section-block behavior-section">
-        <div class="section-intro" data-reveal>
-          <h2>Where behavior breaks</h2>
-          <p>Recognizing evidence is only part of the task. Use the two views to see what can go wrong after evidence arrives.</p>
-        </div>
-        <div class="behavior-controls" aria-label="Research setting">
-          <button type="button" class="behavior-control is-active" data-behavior="conversation" aria-pressed="true">Patient conversation</button>
-          <button type="button" class="behavior-control" data-behavior="ward" aria-pressed="false">Longitudinal record</button>
-        </div>
-        <div class="behavior-panel is-active" data-panel="conversation" data-reveal>
-          <div class="behavior-visual">
-            <img src="images/multiagent.png" alt="Overview of the patient-facing medical AI study" loading="lazy">
-          </div>
-          <div class="behavior-copy">
-            <h3>Escalation arrives too late</h3>
-            <p>Once a risk signal appears, another empathetic question may be the wrong next step. The dialogue study examines when to ask more, revise a response, or recommend escalation.</p>
-            <p class="research-note">This work uses a SafeMed-R1 controller and evaluation criteria derived from Med-GRADE.</p>
-          </div>
-        </div>
-        <div class="behavior-panel" data-panel="ward">
-          <div class="ward-sequence" aria-label="Illustrative WARD failure pattern">
-            <p><span>New evidence</span> A pathology result enters the record.</p>
-            <p><span>State update</span> The agent repeats the result but does not revise its assessment.</p>
-            <p><span>Next action</span> Tool calls continue without clear case progress.</p>
-          </div>
-          <div class="behavior-copy">
-            <h3>The record changes; the plan does not</h3>
-            <p>WARD evaluates clinical agents across longitudinal records and tool use. It helps locate evidence omissions, invalid repetition, and failures to progress.</p>
-            <p class="research-note">WARD currently diagnoses these failures; it does not establish that the earlier controller solves them.</p>
-          </div>
-        </div>
+      <section id="next-question" class="section-block">
+        <h2>Next Question</h2>
+        <p>Can explicit patient-state tracking and checks on evidence and action preconditions make clinical agents more reliable? A future comparison would test a baseline agent, turn-level response review, and state-aware governance, measuring both case progress and the costs of unnecessary intervention.</p>
       </section>
 
-      <section id="next" class="section-block next-section" data-reveal>
-        <h2>What comes next</h2>
-        <p>Can patient state guide safer clinical action?</p>
-        <div class="next-detail">
-          <p>The next comparison is between an unmodified agent, turn-level response review, and state-aware governance. Alongside case progress, it should measure missed evidence, unproductive repetition, premature stopping, extra tool calls, and unnecessary intervention.</p>
-          <p>The research line is a progression of questions and tests. The five projects are not presented as one already validated end-to-end system.</p>
-        </div>
+      <section id="news" class="section-block">
+        <h2>News</h2>
+        <ul class="news-list">
+          <li><strong class="news-date">[2026]</strong> <strong>WARD</strong>, a study of longitudinal clinical agent behavior, submitted to <em>ICLR 2027</em>.</li>
+          <li><strong class="news-date">[Aug 2026]</strong> <strong class="news-paper-title">Med-GRADE: Medical Grading and Rubric-based Assessment of Doctor-Patient Encounters</strong><br>
+                <span class="authors"><strong>Chao Ding*</strong></span><br>
+                Accepted to <em>EMNLP 2026</em>. * Co-first author.</li>
+          <li><strong class="news-date">[Jul 2026]</strong> <strong class="news-paper-title">Governing Clinical Readiness Claims Derived from Medical AI Benchmark Results</strong><br>Published in <em>Journal of Medical Systems</em>. <a href="https://doi.org/10.1007/s10916-026-02445-7" target="_blank" rel="noopener noreferrer">DOI </a> <span class="metric-badge">2025 JIF 8.8</span></li>
+          <li><strong class="news-date">[2026]</strong> <strong class="news-paper-title">Advancing Medical AI through Benchmarking and Competition for Specialty Triage</strong><br>Published in <em>npj Digital Medicine</em>. <a href="https://doi.org/10.1038/s41746-026-02433-8" target="_blank" rel="noopener noreferrer">DOI </a> <span class="metric-badge">2025 JIF 18.0</span></li>
+          <li><strong class="news-date">[2026]</strong> SafeMed-R1 released with open code for clinician-audited safety and ethics alignment in medical LLMs.</li>
+          <li><strong class="news-date">[2026]</strong> <strong class="news-paper-title">Beyond Knowledge to Agency: Evaluating Expertise, Autonomy, and Integrity in Finance with CNFinBench</strong><br>Accepted to <em>KDD 2026</em>. <a href="https://dl.acm.org/doi/abs/10.1145/3770855.3817482" target="_blank" rel="noopener noreferrer">DOI </a></li>
+          <li><strong class="news-date">[2026]</strong> Paper accepted by CVPR 2026 on biomedical object referring and segmentation with MLLMs.</li>
+          <li><strong class="news-date">[2025]</strong> <strong class="news-paper-title">TyG Index, Depression, and Cognitive Dysfunction: NHANES with Machine Learning Support</strong><br>Published in <em>Journal of Affective Disorders</em>. <a href="https://doi.org/10.1016/j.jad.2025.01.051" target="_blank" rel="noopener noreferrer">DOI </a> <span class="metric-badge">2025 JIF 5.7</span></li>
+          <li><strong class="news-date">[2025]</strong> <strong class="news-paper-title">Smoking Types and Stroke Risk: Development of a Predictive Model for Identifying Stroke Risk</strong><br>Published in <em>Frontiers in Physiology</em>. <a href="https://doi.org/10.3389/fphys.2025.1528910" target="_blank" rel="noopener noreferrer">DOI </a> <span class="metric-badge">2025 JIF 4.3</span></li>
+          <li><strong class="news-date">[2025]</strong> Joined Shanghai Artificial Intelligence Laboratory as a Research Intern.</li>
+          <li><strong class="news-date">[2024]</strong> <strong class="news-paper-title">U-Shaped Relationship between TyG Index and Depression Using Machine Learning</strong><br>Published in <em>Heliyon</em>. <a href="https://doi.org/10.1016/j.heliyon.2024.e38615" target="_blank" rel="noopener noreferrer">DOI </a> <span class="metric-badge">2025 JIF 3.4</span></li>
+        </ul>
       </section>
 
-      <section id="publications" class="section-block publications-section">
-        <div class="section-intro" data-reveal>
-          <h2>Selected publications</h2>
-          <p>The research path above is the organizing question. These publications provide examples of its methods and adjacent benchmark work. See the <a href="https://scholar.google.com/citations?user=sGiHBpsAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">full publication list</a>.</p>
-        </div>
-        <div class="publication-list">
-          <article class="publication-entry" data-reveal>
+      <section id="publications" class="section-block">
+        <h2>Selected Publications</h2>
+        <p class="note">* indicates equal contribution / co-first authorship. The full list is available on <a href="https://scholar.google.com/citations?user=sGiHBpsAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>. Journal metrics are 2025 Journal Impact Factors, released in 2026.</p>
+        <h3 class="publication-group">Medical AI &amp; Clinical Safety</h3>
+
+
+<article class="publication-card">
+          <div class="publication-visual">
+            <span class="venue-badge">Under review</span>
+            <img src="images/multiagent.png" alt="Patient-facing medical AI study overview" loading="lazy">
+          </div>
+          <div class="publication-info">
+            <div class="publication-meta-row"><span class="status-badge status-badge-muted">Under review</span></div>
+            <h3>Conversational Fluency Does Not Ensure Clinical Safety in Patient-Facing Medical AI</h3>
+            <p class="authors"><strong>Ding, C.*</strong>, et al.</p>
+            <p class="venue">Manuscript under review.</p>
+          </div>
+        </article>
+
+<article class="publication-card">
+          <div class="publication-visual">
+            <span class="venue-badge">arXiv</span>
             <img src="images/safemed-r1.png" alt="SafeMed-R1 method overview" loading="lazy">
-            <div>
-              <p class="publication-status">Preprint · 2026</p>
-              <h3><a href="https://arxiv.org/abs/2605.28338" target="_blank" rel="noopener noreferrer">SafeMed-R1: Clinician-Audited Safety and Ethics Alignment for Medical Large Language Models</a></h3>
-              <p><strong>Ding, C.*</strong>, et al. <a href="https://github.com/OpenMedZoo/SafeMed-R1" target="_blank" rel="noopener noreferrer">Code</a></p>
+          </div>
+          <div class="publication-info">
+            <div class="publication-meta-row"><span class="status-badge status-badge-muted">Preprint · 2026</span></div>
+            <h3><a href="https://arxiv.org/abs/2605.28338" target="_blank" rel="noopener noreferrer">SafeMed-R1: Clinician-Audited Safety and Ethics Alignment for Medical Large Language Models</a></h3>
+            <p class="authors"><strong>Ding, C.*</strong>, et al.</p>
+            <p class="venue">arXiv preprint, 2026.</p>
+            <div class="publication-links">
+              <a href="https://arxiv.org/abs/2605.28338" target="_blank" rel="noopener noreferrer"> arXiv</a>
+              <a href="https://github.com/OpenMedZoo/SafeMed-R1" target="_blank" rel="noopener noreferrer"> Code</a>
             </div>
-          </article>
-          <article class="publication-entry publication-entry-text" data-reveal>
-            <div>
-              <p class="publication-status">EMNLP 2026 · Accepted</p>
-              <h3>Med-GRADE: Medical Grading and Rubric-based Assessment of Doctor-Patient Encounters</h3>
-              <p><strong>Chao Ding*</strong>, et al. * Equal contribution.</p>
-            </div>
-          </article>
-          <article class="publication-entry" data-reveal>
+          </div>
+        </article>
+
+<article class="publication-card">
+          <div class="publication-visual">
+            <span class="venue-badge">npj Digit Med</span>
             <img src="images/npj.jpg" alt="Specialty triage benchmark overview" loading="lazy">
-            <div>
-              <p class="publication-status">npj Digital Medicine · 2026</p>
-              <h3><a href="https://doi.org/10.1038/s41746-026-02433-8" target="_blank" rel="noopener noreferrer">Advancing Medical AI through Benchmarking and Competition for Specialty Triage</a></h3>
-              <p><strong>Ding, C.*</strong>, Bian, M.*, Yuan, M.*, et al. <a href="https://medbench.opencompass.org.cn/home" target="_blank" rel="noopener noreferrer">Project</a></p>
+          </div>
+          <div class="publication-info">
+            <div class="publication-meta-row"><span class="metric-badge">2025 JIF 18.0</span></div>
+            <h3><a href="https://doi.org/10.1038/s41746-026-02433-8" target="_blank" rel="noopener noreferrer">Advancing Medical AI through Benchmarking and Competition for Specialty Triage</a></h3>
+            <p class="authors"><strong>Ding, C.*</strong>, Bian, M.*, Yuan, M.*, et al.</p>
+            <p class="venue"><em>npj Digital Medicine</em>, 9, Article 308 (2026).</p>
+            <div class="publication-links">
+              <a href="https://medbench.opencompass.org.cn/home" target="_blank" rel="noopener noreferrer"> Project</a>
+              <a href="https://doi.org/10.1038/s41746-026-02433-8" target="_blank" rel="noopener noreferrer"> DOI</a>
             </div>
-          </article>
-          <article class="publication-entry" data-reveal>
+          </div>
+        </article>
+        <h3 class="publication-group">Agent Benchmarks</h3>
+<article class="publication-card">
+          <div class="publication-visual">
+            <span class="venue-badge">KDD</span>
             <img src="images/kdd.png" alt="CNFinBench evaluation overview" loading="lazy">
-            <div>
-              <p class="publication-status">KDD 2026</p>
-              <h3><a href="https://dl.acm.org/doi/abs/10.1145/3770855.3817482" target="_blank" rel="noopener noreferrer">Beyond Knowledge to Agency: Evaluating Expertise, Autonomy, and Integrity in Finance with CNFinBench</a></h3>
-              <div class="publication-authors">Equal-contribution authors: Ding, J.*, <strong>Ding, C.*</strong>, Jiang, Y.*, et al. <a href="https://github.com/VertiAIBench/CNFinBench" target="_blank" rel="noopener noreferrer">Code</a></div>
+          </div>
+          <div class="publication-info">
+            <div class="publication-meta-row"><span class="status-badge status-badge-muted">KDD 2026</span></div>
+            <h3><a href="https://dl.acm.org/doi/abs/10.1145/3770855.3817482" target="_blank" rel="noopener noreferrer">Beyond Knowledge to Agency: Evaluating Expertise, Autonomy, and Integrity in Finance with CNFinBench</a></h3>
+            <p class="authors">Ding, J.*, <strong>Ding, C.*</strong>, Jiang, Y.*, et al.</p>
+            <p class="venue">ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2026.</p>
+            <div class="publication-links">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3770855.3817482" target="_blank" rel="noopener noreferrer"> DOI</a>
+              <a href="https://cnfinbench.opencompass.org.cn/" target="_blank" rel="noopener noreferrer"> Project</a>
+              <a href="https://github.com/VertiAIBench/CNFinBench" target="_blank" rel="noopener noreferrer"> Code</a>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </section>
 
       <section id="experience" class="section-block">
@@ -227,7 +208,7 @@
         <div class="project-list">
           <article class="project-card">
             <div>
-              <h3>WARD: longitudinal clinical agent evaluation</h3>
+              <h3>WARD: Longitudinal Clinical Agent Evaluation</h3>
               <p class="project-meta">Submitted to ICLR 2027</p>
               <ul>
                 <li>Evaluate how clinical agents update patient state as evidence arrives in longitudinal electronic health records.</li>
@@ -251,23 +232,12 @@
         <div class="project-list">
           <article class="project-card">
             <div>
-              <h3>Patient-facing conversation governance</h3>
-              <p class="project-meta">Dec. 2025 – May 2026</p>
+              <h3>Patient-Facing Multi-Agent Medical AI</h3>
+              <p class="project-meta">Manuscript under review · Dec. 2025 – May 2026</p>
               <ul>
                 <li>Built a simulated patient-doctor evaluation environment integrating patient simulators, frontier LLM doctor backbones, an automated clinical judge, and a SafeMed-R1 in-loop safety controller.</li>
                 <li>Formalized delayed escalation as a temporal safety failure and evaluated five LLMs across 150 multi-turn consultations against a 40-case clinician reference benchmark.</li>
-                <li>Implemented a five-action controller (PASS, REWRITE, ASK-MORE, ESCALATE, and REFUSE) and evaluated both the benefits and the costs of intervention.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h3>Clinician-verified supervision and Med-GRADE</h3>
-              <p class="project-meta">Clinical data and evaluation</p>
-              <ul>
-                <li>Use clinician review and revisions to ground supervision for clinical judgment, safety, and ethics.</li>
-                <li>Developed clinician-grounded criteria for evaluating doctor–patient encounters and the quality of automated grading.</li>
+                <li>Implemented a five-action controller (PASS, REWRITE, ASK-MORE, ESCALATE, and REFUSE), reducing mean escalation turn from 6.28 to 3.78 rounds and missed escalation from 62.5% to 12.5%.</li>
               </ul>
             </div>
           </article>
@@ -353,13 +323,18 @@
             <span>Anatomy · Physiology · Pathology · Pharmacology · Medical Imaging · Immunology</span>
           </article>
         </div>
-        <p class="service-line">Conference reviewer · <a href="https://iclr.cc/" target="_blank" rel="noopener noreferrer">ICLR 2027</a></p>
       </section>
 
-      <footer id="contact" class="site-footer">
-        <h2>Get in touch</h2>
-        <a class="footer-email" href="mailto:dingchaochao58@gmail.com">dingchaochao58@gmail.com</a>
-        <p>© <span id="current-year">2026</span> Chao Ding · Shanghai, China</p>
+      <section id="services" class="section-block">
+        <h2>Services</h2>
+        <h4>Conference Reviewers</h4>
+        <ul class="service-list">
+          <li><a href="https://iclr.cc/" target="_blank" rel="noopener noreferrer">International Conference on Learning Representations (ICLR) 2027</a></li>
+        </ul>
+      </section>
+
+      <footer class="site-footer">
+        <p>© <span id="current-year">2026</span> Chao Ding · Research at the intersection of clinical practice and trustworthy AI.</p>
       </footer>
     </main>
   </div>
